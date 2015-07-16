@@ -28,8 +28,12 @@ class GradleGetPlugin implements Plugin<Project> {
 			// TODO: Clean up clone URL directory.
         }
 
-        target.task('publish').dependsOn('tasks') << {
+        target.task('publish').dependsOn('jar') << {
             println "Publishing..."
+			def jar = target.getTasks().getByName('jar')
+			def path = (String) jar.getProperties().get("archivePath");
+			println path
+
         }
     }
 }
