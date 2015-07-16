@@ -10,6 +10,9 @@ class GradleGetPluginTest {
     @Test
     public void getPluginAddsGetTaskToProject() {
         Project project = ProjectBuilder.builder().build()
+		if (!project.hasProperty('pluginManager')) {
+			return
+		}
         project.pluginManager.apply 'com.google.developers.gradleget'
 
         assertTrue(project.tasks.get instanceof DefaultTask)
