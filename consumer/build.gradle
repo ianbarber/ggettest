@@ -1,0 +1,12 @@
+buildscript {
+    repositories {
+        maven {
+            url uri('../repo')
+        }
+    }
+    dependencies {
+        classpath group: 'com.google.developers', name: 'gradleget',
+                                  version: '1.0-SNAPSHOT'
+    }
+}
+apply plugin: 'com.google.developers.gradleget'
