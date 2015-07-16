@@ -12,8 +12,13 @@ repositories {
     mavenCentral()
 }
 
+configurations {
+    deployerJars
+}
+
 dependencies {
     testCompile 'junit:junit:4.12'
+    deployerJars 'net.anzix.aws:s3-maven-wagon:3.3'
 }
 
 group = 'com.google.developers'
@@ -22,7 +27,11 @@ version = '1.0-SNAPSHOT'
 uploadArchives {
     repositories {
         mavenDeployer {
-            repository(url: uri('../repo'))
+            //repository(url: uri('../repo'))
+			configuration = configurations.deployerJars
+	        repository(url: "TODO") {
+	            authentication(userName: "TODO", password: "TODO")
+	        }
         }
     }
 }
