@@ -10,4 +10,5 @@ buildscript {
                                   version: '1.0-SNAPSHOT'
     }
 }
+apply plugin: 'maven'
 apply plugin: 'com.google.developers.gradleget'

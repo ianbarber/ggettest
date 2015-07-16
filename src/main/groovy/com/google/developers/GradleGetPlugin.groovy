@@ -27,5 +27,9 @@ class GradleGetPlugin implements Plugin<Project> {
 			
 			// TODO: Clean up clone URL directory.
         }
+
+        target.task('publish').dependsOn('tasks') << {
+            println "Publishing..."
+        }
     }
 }

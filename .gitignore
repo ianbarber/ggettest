@@ -2,3 +2,4 @@ build/
 repo/
 .gradle/
 .idea
+consumer/.gradle/
