@@ -12,6 +12,7 @@ repositories {
 }
 
 dependencies {
+	compile 'org.ajoberstar:grgit:0.2.0'
     testCompile 'junit:junit:4.12'
 }
 
