@@ -27,10 +27,9 @@ version = '1.0-SNAPSHOT'
 uploadArchives {
     repositories {
         mavenDeployer {
-            //repository(url: uri('../repo'))
 			configuration = configurations.deployerJars
-	        repository(url: "TODO") {
-	            authentication(userName: "TODO", password: "TODO")
+	        repository(url: "gs://XXX-BUCKET-NAME-XXX") {
+	            authentication(userName: "XXX-ACCESS-TOKEN-XXX", password: "XXX-SECRET-TOKEN-XXX")
 	        }
         }
     }
